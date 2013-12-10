@@ -3,7 +3,7 @@
                 Current time is 
 <?php
     echo date('G:i:s');
-?> (by php) <br />
+?> (by php) <br /> <br />
         <script type="text/javascript">
                 var d = new Date();
                 var curr_hour = d.getHours();
