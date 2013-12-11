@@ -1,25 +1,26 @@
 <?php
-	// Connect DB
-	$link = mysql_connect('localhost', 'root', '881101dnr');
-
-	if(!$link)
-	{
-		die('Could not connect: '.mysql_error());
-	}
-
-	// Select database
-	mysql_select_db('opentutorials');
-	mysql_query("set session character_set_connection=utf8;");
+        // DB 접속
+    $link = mysql_connect('localhost', 'root', '881101dnr');
+        
+        if(!$link)
+        {
+                die('Could not connect: '.mysql_error());
+        }
+        
+        // select database
+        mysql_select_db('opentutorials');
+        mysql_query("set session character_set_connection=utf8;");
         mysql_query("set session character_set_results=utf8;");
         mysql_query("set session character_set_client=utf8;");
-
-	if(!empty($_GET['id]))
-	{
-		$sql = "select * from topic where id=".$_GET['id'];
-		$result = mysql_query($sql);
-		$topic = mysql_fetch_assoc($result);
-	}
+        
+        if(!empty($_GET['id']))
+        {
+                $sql = "select * from topic where id=".$_GET['id'];
+                $result = mysql_query($sql);
+                $topic = mysql_fetch_assoc($result);
+        }
 ?>
+
 <html>
         <head>
                 <meta charset="utf-8" />
@@ -148,7 +149,7 @@
                                                 </div>
                                                 <?php
                                         }
-                                                ?>
+                                                ?>                                
                         </article>
                 </div>
         </body>
